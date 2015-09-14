@@ -1,7 +1,9 @@
-PROMPT="%{$bg[black]%}%(!.%{$fg_no_bold[red]%}.%{$fg_no_bold[magenta]%}) %n%{$fg_no_bold[green]%} %M%{$fg_no_bold[blue]%} %~ %{$reset_color%}%{$fg_no_bold[black]%}%{$reset_color%} "
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+	ssh="%{$fg_no_bold[white]#%}"
+fi
+PROMPT="%{$bg[black]%}%(!.%{$fg_no_bold[red]%}.%{$fg_no_bold[magenta]%}) %n $ssh%{$fg_no_bold[green]%}%M%{$fg_no_bold[blue]%} %~ %{$reset_color%}%{$fg_no_bold[black]%}%{$reset_color%} "
 RPROMPT='$(git_super_status)'
 
-GIT_PROMPT_EXECUTABLE="haskell"
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[black]%}%{$bg[black]%}%{$fg_no_bold[blue]%}  "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$bg[black]%} %{${reset_color}%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$bg[black]%}*"
