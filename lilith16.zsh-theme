@@ -4,6 +4,7 @@ fi
 PROMPT="%{$bg[black]%}%(!.%{$fg_no_bold[red]%}.%{$fg_no_bold[magenta]%}) %n $ssh%{$fg_no_bold[green]%}%M%{$fg_no_bold[blue]%} %~ %{$reset_color%}%{$fg_no_bold[black]%}%{$reset_color%} "
 RPROMPT='$(git_super_status)'
 
+ZSH_THEME_GIT_PROMPT_CACHE=1
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[black]%}%{$bg[black]%}%{$fg_no_bold[blue]%}  "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$bg[black]%} %{${reset_color}%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$bg[black]%}*"
