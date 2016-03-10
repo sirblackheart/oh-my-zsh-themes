@@ -1,5 +1,5 @@
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-	ssh="%{$fg_no_bold[white]#%}"
+	ssh="%{$fg_no_bold[white]%}#"
 fi
 PROMPT="%{$bg[black]%}%(!.%{$fg_no_bold[red]%}.%{$fg_no_bold[magenta]%}) %n $ssh%{$fg_no_bold[green]%}%M%{$fg_no_bold[blue]%} %~ %{$reset_color%}%{$fg_no_bold[black]%}%{$reset_color%} "
 RPROMPT='$(git_super_status)'
